@@ -16,11 +16,13 @@ float rand_float();
 
 Matrix mat_alloc(size_t rows, size_t cols);
 
+void mat_fill(Matrix mat, float fill);
+
 void mat_rand(Matrix mat, float low, float high);
 
-void mat_dot(Matrix dest, Matrix a, Matrix b);
+void mat_mul(Matrix dest, Matrix a, Matrix b);
 
-void mat_add(Matrix dest, Matrix mat);
+void mat_sum(Matrix dest, Matrix mat);
 
 void mat_print(Matrix mat);
 

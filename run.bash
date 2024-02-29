@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Compile both C files and link them
-gcc main.c nn.c -o ./out/main
+gcc main.c nn.c -o ./bin/main
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
     # Run the executable
-    ./out/main
+    ./bin/main
 else
     echo "Compilation failed."
 fi
