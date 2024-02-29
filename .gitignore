@@ -1,0 +1,7 @@
+
+# Directories
+bin/
+
+# Vim swap files
+*.swp
+
