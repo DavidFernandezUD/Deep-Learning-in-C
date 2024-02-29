@@ -2,6 +2,7 @@
 #include <stdlib.h> 
 #include <stdio.h>
 #include <assert.h>
+#include <math.h>
 
 
 Matrix mat_alloc(size_t rows, size_t cols) {    
@@ -17,6 +18,10 @@ Matrix mat_alloc(size_t rows, size_t cols) {
 
 float rand_float() {
     return (float) rand() / (float) RAND_MAX;
+}
+
+float sigmoidf(float x) {
+    return 1.f / (1.f + expf(-x));  // expf() does exponentiation with float
 }
 
 void mat_fill(Matrix mat, float fill) {
@@ -61,6 +66,15 @@ void mat_sum(Matrix dest, Matrix mat) {
     for(size_t i = 0; i < mat.rows; i++) {
         for(size_t j = 0; j < mat.cols; j++) {
             MAT_AT(dest, i, j) += MAT_AT(mat, i, j);
+        }
+    }
+}
+
+void mat_sig(Matrix mat) {
+    
+    for(size_t i = 0; i < mat.rows; i++) {
+        for(size_t j = 0; j < mat.cols; j++) {
+            MAT_AT(mat, i, j) = sigmoidf(MAT_AT(mat, i, j));
         }
     }
 }

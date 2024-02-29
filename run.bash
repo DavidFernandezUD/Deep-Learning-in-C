@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Compile both C files and link them
-gcc main.c nn.c -o ./bin/main
+# Compile both C files and link them (-lm to link the math library)
+gcc main.c nn.c -o ./bin/main -lm
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
