@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <assert.h>
-#include "../blas.h"
+#include "../src/blas.h"
 
 
 void test_mat() {

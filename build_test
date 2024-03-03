@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Compile both C files and link them (-lm to link the math library)
-gcc blas_test.c ../blas.c -o blas_test -lm
+gcc ./test/blas_test.c ./src/blas.c -o ./bin/tests/blas_test -lm
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
     # Run the executable
-    ./blas_test
+    ./bin/tests/blas_test
 else
     echo "Compilation failed."
 fi

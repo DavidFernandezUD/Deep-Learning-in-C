@@ -66,6 +66,9 @@ Matrix mat_alloc(size_t rows, size_t cols) {
     return mat;
 }
 
+void mat_free(Matrix mat) {
+    free(mat.data);
+}
 
 Matrix mat(size_t rows, size_t cols, float* data) {
     

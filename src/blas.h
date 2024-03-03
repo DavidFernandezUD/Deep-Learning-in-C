@@ -43,6 +43,8 @@ float dactf(float x, Activation act);
 // Matrix creation & initialization
 Matrix mat_alloc(size_t rows, size_t cols);
 
+void mat_free(Matrix mat);
+
 Matrix mat(size_t rows, size_t cols, float* data);
 
 void mat_fill(Matrix mat, float fill);

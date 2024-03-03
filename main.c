@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <time.h>
-#include "blas.h"
+#include "src/blas.h"
 
 
 int main() {
