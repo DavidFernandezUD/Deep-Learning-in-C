@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <time.h>
-#include "nn.h"
+#include "blas.h"
 
 
 int main() {
@@ -32,11 +32,11 @@ int main() {
     
     mat_mul(z1, inputs, w1);
     mat_sum(z1, b1);
-    mat_sig(z1);
+    mat_act(z1, SIGMOID);
 
     mat_mul(z2, z1, w2);
     mat_sum(z2, b2);
-    mat_sig(z2);
+    mat_act(z2, TANH);
 
     mat_print(z2);
 
