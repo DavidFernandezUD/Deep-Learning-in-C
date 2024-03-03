@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <stdbool.h>
 #include "blas/blas.h"
 
 
@@ -35,7 +34,7 @@ void layer_free(Layer layer);
 // Layer operations
 void layer_forward(Layer *layer, const Matrix inputs);
 
-void layer_backward(Layer *layer, const Matrix out_grad, float learning_rate);
+void layer_backward(Layer *layer, Matrix out_grad, float learning_rate);
 
 
 // Layer utils
