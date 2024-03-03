@@ -20,7 +20,8 @@ typedef enum {
     SIGMOID,
     TANH,
     RELU,
-    LEAKY_RELU
+    LEAKY_RELU,
+    IDENTITY
 } Activation;
 
 
@@ -34,6 +35,8 @@ float tanhf(float x);
 float reluf(float x);
 
 float leaky_reluf(float x);
+
+float identityf(float x);
 
 float actf(float x, Activation act);
 

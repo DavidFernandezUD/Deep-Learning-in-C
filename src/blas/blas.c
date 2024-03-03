@@ -28,12 +28,17 @@ float leaky_reluf(float x) {
     return (x > 0) ? x : x * LEAK_PARAM;
 }
 
+float identityf(float x) {
+    return x;
+}
+
 float actf(float x, Activation act) {
     switch(act) {
         case SIGMOID:       return sigmoidf(x); 
         case TANH:          return tanhf(x);
         case RELU:          return reluf(x);
         case LEAKY_RELU:    return leaky_reluf(x);
+        case IDENTITY:      return identityf(x);
     }
     printf("ERROR: Invalid activation function\n");
     assert(0);
@@ -46,6 +51,7 @@ float dactf(float y, Activation act) {
         case TANH:          return 1 - y * y;
         case RELU:          return (y > 0) ? 1 : 0;
         case LEAKY_RELU:    return (y > 0) ? 1 : LEAK_PARAM;
+        case IDENTITY:      return 1;
     }
     printf("ERROR: Invalid activation function\n");
     assert(0);

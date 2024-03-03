@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <assert.h>
-#include "../src/blas.h"
+#include "../src/blas/blas.h"
 
 
 void test_mat() {
@@ -217,7 +217,7 @@ int main() {
     test_mat_mean();
     test_transpose();
 
-    printf("Test passed successfully!\n");
+    printf("Blas test passed successfully!\n");
 
     return 0;
 }

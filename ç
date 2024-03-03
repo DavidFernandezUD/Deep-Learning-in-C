@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <time.h>
+#include <assert.h>
+#include "../src/layer.h"
+
+void test_layer_alloc() {
+    
+    Layer layer = layer_alloc(64, 128, RELU);
+    layer_print(layer);
+
+    layer_free(layer);
+
+} 
+
+int main() {
+    
+    srand(time(NULL));
+    
+    test_layer_alloc();
+
+    printf("Layer test passed successfully!\n");
+
+    return 0;
+}
+
