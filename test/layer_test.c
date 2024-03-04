@@ -4,7 +4,7 @@
 #include "../src/layer.h"
 
 
-#define TOLERANCE 1e-5
+#define TOLERANCE 1e-7
 
 
 void test_layer_forward() {

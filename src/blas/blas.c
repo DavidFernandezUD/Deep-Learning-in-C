@@ -296,6 +296,8 @@ void mat_mean(Matrix dest, const Matrix mat, int axis) {
         printf("ERROR: Invalid axis\n");
         assert(0);
     }
+	
+    mat_fill(dest, 0);
 
     for(size_t i = 0; i < mat.rows; i++) {
         for(size_t j = 0; j < mat.cols; j++) {

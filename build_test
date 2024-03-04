@@ -3,12 +3,15 @@
 # Compile both C files and link them (-lm to link the math library)
 gcc ./test/blas_test.c ./src/blas/blas.c -o ./bin/tests/blas_test -lm
 gcc ./test/layer_test.c ./src/layer.c ./src/blas/blas.c -o ./bin/tests/layer_test -lm
+gcc ./test/nn_test.c ./src/nn.c ./src/layer.c ./src/blas/blas.c -o ./bin/tests/nn_test -lm
+
 
 # Check if compilation was successful
 if [ $? -eq 0 ]; then
     # Run the executable
     ./bin/tests/blas_test
     ./bin/tests/layer_test
+    ./bin/tests/nn_test
 else
     echo "Compilation failed."
 fi
