@@ -22,8 +22,9 @@ Layer layer_alloc(size_t n_inputs, size_t n_outputs, Activation act) {
     // Allocation of gradients
     layer.d_weights = mat_alloc(n_inputs, n_outputs);
     layer.d_bias = mat_alloc(1, n_outputs);
-
-    mat_rand(layer.weights, -0.1, 0.1);
+    
+    // TODO: Initialize weights based on previous layer n_outputs
+    mat_rand(layer.weights, -1, 1);
     mat_fill(layer.bias, 0);
     
     // Layer activation

@@ -54,7 +54,6 @@ void nn_fit(NN *nn, Matrix X, Matrix y, size_t epochs, float learning_rate) {
 
         // TODO: Implement loss externally
 
-        printf("epoch %ld:\n", (i + 1));
     }
 }
 

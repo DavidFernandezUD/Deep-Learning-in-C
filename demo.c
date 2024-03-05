@@ -13,7 +13,7 @@ int main() {
 
     Layer layer1 = layer_alloc(16, 128, LEAKY_RELU);
     Layer layer2 = layer_alloc(128, 128, LEAKY_RELU);
-    Layer layer3 = layer_alloc(128, 4, TANH);
+    Layer layer3 = layer_alloc(128, 4, IDENTITY);
 
     // Prediction
     printf("Inputs: \n");

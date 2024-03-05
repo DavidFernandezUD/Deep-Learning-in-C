@@ -46,6 +46,7 @@ void test_layer_backward() {
     
     Layer layer = layer_alloc(2, 3, IDENTITY);
     mat_fill(layer.weights, 0.5);
+    mat_fill(layer.bias, 0.f);
 
     float data[] = {
         0, 0,
